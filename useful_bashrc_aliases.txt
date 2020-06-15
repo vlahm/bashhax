@@ -1,0 +1,36 @@
+#navigate to directory
+alias that1dir="cd /path/to/that1dir"
+
+#move up faster
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+#open your .bashrc
+alias bashrc="nano ~/.bashrc" #n00b
+alias bashrc="vim ~/.bashrc" #1337
+
+#execute bashrc
+alias bashrc2=". ~/.bashrc"
+
+#open arbitrary stuff (many exceptions probably)
+alias that1doc="start /path/to/that1doc.doc" #windows
+alias that1doc="xdg-open /path/to/that1doc.doc" #linux
+
+#ensure that you don't accidentally overwrite stuff
+alias mv="mv -i"
+alias cp="cp -i"
+
+#cd into directory and list its contents
+c() { cd "$@" && ls; }
+
+#do git stuff more efficiently, e.g.: gitc 'commit msg here'
+alias gits="git status"
+alias gita="git add ."
+gitc() { git commit -m "$1"; }
+
+#access remote servers without remembering IPs
+alias that1serv="ssh user@123.45.67.890"
+alias that1servf="sftp user@123.45.67.890"
+

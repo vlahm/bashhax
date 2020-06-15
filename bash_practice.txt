@@ -1,0 +1,74 @@
+#get manual page for any bash command
+man
+
+#print working (current) directory
+pwd
+
+#list files and folders
+ls
+    -l (include file and folder metadata)
+    -R (list nested files and folders recursively)
+
+#change directory
+cd
+    .. (parent directory)
+    ~ (home)
+    - (previous)
+    / (root)
+
+#make and remove directory
+mkdir
+rmdir
+
+#create file
+touch
+
+#remove files
+rm
+    -r (recursively)
+    -f (force - REALLY DANGEROUS)
+
+#move and/or rename stuff
+mv
+    -i (ask to confirm if something will be overwritten)
+
+#copy stuff
+cp
+    -i (interactive)
+    -r (recursive)
+
+#search for stuff
+find
+    -type (files, directories, etc.)
+    -iname (case insensitive)
+    -maxdepth (only search down x levels)
+
+#here's an example of executing the head command (print first few lines) for all files returned by find
+find . -name '*<filetype>' -type f -exec head {} \;
+
+#search for text strings within files
+grep
+    -r (recursive)
+    egrep (with regular expressions)
+    | (pipe the output of grep into another command)
+
+#globbing (for simple text-manipulation)
+    * (represents any number of any character(s))
+    ? (represents any character)
+
+#print contents of file
+cat
+
+#program for reading files, has its own arcane commands for moving around, searching, etc.
+less
+
+#run as root (dangerous, but necessary for some installations and other actions)
+sudo
+    su (this lets you actually log in as root, which is even more dangerous)
+
+#disk usage
+du -hcs
+
+ssh (logging into remote servers)
+sftp (transferring files between systems)
+
